@@ -18,6 +18,14 @@ ProjectTemplate
      :alt: Updates
 
 
+Sphinx and Read the Docs for documentation
+Tox and Travis-CI for continuous integration
+coverage.py and codecov.io for code coverage
+pytest and nose for testing
+pylint, pep8, and codeclimate.com for code quality
+badges
+versioning with bumpversion
+
 Python Boilerplate contains all the boilerplate you need to create a Python package.
 
 
