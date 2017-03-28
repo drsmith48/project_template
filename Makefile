@@ -47,13 +47,18 @@ clean-test: ## remove test and coverage artifacts
 	rm -f .coverage
 	rm -fr htmlcov/
 
+clean-docs: ## clean docs
+	rm -f docs/project_template.rst
+	rm -f docs/modules.rst
+	sphinx-apidoc -o docs/ project_template
+	$(MAKE) -C docs clean
+
 lint: ## check style with flake8
-	flake8 project_template tests
+	flake8 --exit-zero --config=setup.cfg --benchmark project_template tests
 
 test: ## run tests quickly with the default Python
 	py.test
 	
-
 test-all: ## run tests on every Python version with tox
 	tox
 
@@ -66,14 +71,14 @@ coverage-html: coverage ## check code coverage and show report in browser
 	@$(BROWSER) htmlcov/index.html
 
 
-docs: ## generate Sphinx HTML & PDF documentation, including API docs
-	rm -f docs/project_template.rst
-	rm -f docs/modules.rst
-	sphinx-apidoc -o docs/ project_template
-	$(MAKE) -C docs clean
-	$(MAKE) -C docs latexpdf
+docs: clean-docs pdf html ## generate Sphinx HTML & PDF documentation, including API docs
+
+html: clean-docs ## generate Sphinx HTML documentation, including API docs
 	$(MAKE) -C docs html
 	@$(BROWSER) docs/_build/html/index.html
+    
+pdf: clean-docs ## generate Sphinx PDF documentation, including API docs
+	$(MAKE) -C docs latexpdf
 
 servedocs: docs ## compile the docs watching for changes
 	watchmedo shell-command -p '*.rst' -c '$(MAKE) -C docs html' -R -D .
