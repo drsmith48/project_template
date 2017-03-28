@@ -58,7 +58,7 @@ test-all: ## run tests on every Python version with tox
 	tox
 
 coverage: ## check code coverage and show report in terminal
-	coverage run --rcfile .coveragerc --module pytest 
+	coverage run --rcfile .coveragerc --module pytest
 	coverage report --rcfile .coveragerc
 
 coverage-html: coverage ## check code coverage and show report in browser
@@ -73,7 +73,7 @@ docs: ## generate Sphinx HTML & PDF documentation, including API docs
 	$(MAKE) -C docs clean
 	$(MAKE) -C docs latexpdf
 	$(MAKE) -C docs html
-	$(BROWSER) docs/_build/html/index.html
+	@$(BROWSER) docs/_build/html/index.html
 
 servedocs: docs ## compile the docs watching for changes
 	watchmedo shell-command -p '*.rst' -c '$(MAKE) -C docs html' -R -D .

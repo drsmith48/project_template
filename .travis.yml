@@ -3,15 +3,19 @@
 
 language: python
 python:
-  - "2.7"
-  - "3.5"
-  - "3.6"
-  - "nightly"
+  - 2.7
+  - 3.5
+  - 3.6
+  - nightly
 
 # command to install dependencies, e.g. pip install -r requirements.txt --use-mirrors
-install: pip install -r requirements_dev.txt
+install:
+  - pip install -r requirements_dev.txt
 
 # command to run tests, e.g. python setup.py test
-script: py.test
+script:
+  - pytest
+  - coverage run --rcfile .coveragerc --module pytest
 
-
+after_success:
+  - codecov
