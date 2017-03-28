@@ -10,6 +10,9 @@ ProjectTemplate
         :target: https://project-template.readthedocs.io/en/latest/?badge=latest
         :alt: Documentation Status
 
+.. image:: https://codecov.io/gh/drsmith48/project_template/branch/master/graph/badge.svg
+  :target: https://codecov.io/gh/drsmith48/project_template
+
 A Python project template with docs, CI, code coverage, versioning, and testing.
 
 The structure of this project began from a ``cookiecutter`` template::
