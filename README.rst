@@ -22,10 +22,47 @@ The structure of this project began from a ``cookiecutter`` template::
 
 The ``cookiecutter`` template provided support for tox, Travis-CI, Makefile, pytest, sphinx documentation, and setup.py.  Support for bumpversion, coverage.py, and codecov.io was added.
 
-* Sphinx and Read the Docs for documentation
+
+**Features**
+
+* ``make`` for build recipes
+
+  * Run ``make`` for overview of recipes
+  
+* ``setup.py`` for building
+
+  * Run ``make dist`` to build source and wheel distributions
+
+* ``py.test`` for testing in current Python environment
+
+  * Run ``make test`` or ``py.test``
+  
+* ``tox`` for testing in multiple Python environments
+
+  * Run ``make test-all`` or ``tox``
+
+* ``.travis.yml`` for continuous integration
+
+  * Uses ``tox.ini`` for configuration
+
+* ``sphinx`` for documentation
+
+  * Run ``make docs`` to build html/latex/pdf docs
+
+* ``flake8`` for code style check
+
+  * Run ``make lint`` or ``flake8 project_template tests``
+  
+* ``coverage`` for test coverage
+
+  * Run ``make coverage``
+
+* ``bumpversion``
+
+  * configuration in ``setup.cfg``
+
 * Tox and Travis-CI for continuous integration
-* coverage.py and codecov.io for code coverage
-* pytest and nose for testing
+* codecov.io for code coverage
 * pylint, pep8, and codeclimate.com for code quality
 * dependencies with pyup.io
 * badges
