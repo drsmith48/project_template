@@ -10,10 +10,6 @@ ProjectTemplate
         :target: https://project-template.readthedocs.io/en/latest/?badge=latest
         :alt: Documentation Status
 
-.. image:: https://pyup.io/repos/github/drsmith48/project_template/shield.svg
-     :target: https://pyup.io/repos/github/drsmith48/project_template/
-     :alt: Updates
-
 A Python project template with docs, CI, code coverage, versioning, and testing.
 
 The structure of this project began from a ``cookiecutter`` template::

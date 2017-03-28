@@ -57,14 +57,16 @@ test: ## run tests quickly with the default Python
 test-all: ## run tests on every Python version with tox
 	tox
 
-coverage: ## check code coverage quickly with the default Python
-	coverage run --source project_template -m pytest
-	
-		coverage report -m
-		coverage html
-		$(BROWSER) htmlcov/index.html
+coverage: ## check code coverage and show report in terminal
+	coverage run --rcfile .coveragerc --module pytest 
+	coverage report --rcfile .coveragerc
 
-docs: ## generate Sphinx HTML documentation, including API docs
+coverage-html: coverage ## check code coverage and show report in browser
+	@coverage html --rcfile .coveragerc
+	@$(BROWSER) htmlcov/index.html
+
+
+docs: ## generate Sphinx HTML & PDF documentation, including API docs
 	rm -f docs/project_template.rst
 	rm -f docs/modules.rst
 	sphinx-apidoc -o docs/ project_template
