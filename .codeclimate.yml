@@ -16,8 +16,13 @@ engines:
 exclude_paths:
   - "tests/"
   - "docs/"
-  - "**.**"
-  - "!**.py"
+  - "LICENSE"
+  - "Makefile"
+  - "**.rst"
+  - "**.ini"
+  - "**.in"
+  - "**.txt"
+  - "**.cfg"
 
 ratings:
   paths:
