@@ -33,7 +33,7 @@ test-all: ## run tests in several Python environments with tox
 	tox
 
 lint: ## check code style/quality with flake8
-	flake8 --exit-zero --benchmark --config=flake8.cfg project_template tests
+	flake8 --exit-zero --benchmark project_template tests
 
 coverage: ## check code coverage and show report in terminal
 	coverage run --rcfile=.coveragerc --module pytest
