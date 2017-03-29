@@ -70,14 +70,13 @@ coverage-html: coverage ## check code coverage and show report in browser
 	@coverage html --rcfile .coveragerc
 	@$(BROWSER) htmlcov/index.html
 
+docs: clean-docs pdf html ## generate HTML & PDF documentation
 
-docs: clean-docs pdf html ## generate Sphinx HTML & PDF documentation, including API docs
-
-html: clean-docs ## generate Sphinx HTML documentation, including API docs
+html: clean-docs ## generate HTML documentation
 	$(MAKE) -C docs html
 	@$(BROWSER) docs/_build/html/index.html
     
-pdf: clean-docs ## generate Sphinx PDF documentation, including API docs
+pdf: clean-docs ## generate PDF documentation
 	$(MAKE) -C docs latexpdf
 
 servedocs: docs ## compile the docs watching for changes

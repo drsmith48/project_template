@@ -20,4 +20,4 @@ script:
   - coverage run --rcfile .coveragerc --module pytest
 
 after_success:
-  - codecov
+  - codeclimate-test-reporter

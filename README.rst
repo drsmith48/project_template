@@ -19,7 +19,6 @@ ProjectTemplate
    :target: https://codeclimate.com/github/drsmith48/project_template
    :alt: Code Quality
 
-
 A Python project template with docs, testing, CI, code coverage, and versioning.  
 
 * ``sphinx`` for html/pdf documentation, hosted at https://project-template.readthedocs.io/
