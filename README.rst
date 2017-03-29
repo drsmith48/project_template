@@ -8,7 +8,7 @@ ProjectTemplate
     :alt: Build Status
 
 .. image:: https://readthedocs.org/projects/project-template/badge/?version=latest
-        :target: https://project-template.readthedocs.io/en/latest/?badge=latest
+        :target: https://project-template.readthedocs.io/en/latest/
         :alt: Documentation Status
 
 .. image:: https://codeclimate.com/github/drsmith48/project_template/badges/coverage.svg
@@ -18,6 +18,19 @@ ProjectTemplate
 .. image:: https://codeclimate.com/github/drsmith48/project_template/badges/gpa.svg
    :target: https://codeclimate.com/github/drsmith48/project_template
    :alt: Code Quality
+   
+Most recent release:
+
+.. image:: https://badge.fury.io/gh/drsmith48%2Fproject_template.svg
+    :target: https://github.com/drsmith48/project_template/releases/latest
+    :alt: GitHub Release
+
+.. image:: https://readthedocs.org/projects/project-template/badge/?version=stable
+        :target: https://project-template.readthedocs.io/en/stable/
+        :alt: Documentation Status
+
+
+
 
 A Python project template with docs, testing, CI, code coverage, and versioning.
 
@@ -50,7 +63,7 @@ A Python project template with docs, testing, CI, code coverage, and versioning.
 
 * Versioning
 
-  * Run ``bumpversion [major|minor|patch]``
+  * Run ``bumpversion [major|minor|patch]`` to increment X.Y.Z version
 
 * Makefile recipes
 
