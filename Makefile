@@ -36,11 +36,11 @@ lint: ## check code style/quality with flake8
 	flake8 --exit-zero --benchmark project_template tests
 
 coverage: ## check code coverage and show report in terminal
-	coverage run --rcfile=.coveragerc --module pytest
-	coverage report --rcfile=.coveragerc
+	coverage run --module pytest
+	coverage report
 
 coverage-html: coverage ## check code coverage and show report in browser
-	@coverage html --rcfile=.coveragerc
+	@coverage html
 	@$(BROWSER) htmlcov/index.html
 
 docs: clean-docs docs-pdf docs-html ## generate HTML & PDF documentation
