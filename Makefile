@@ -62,7 +62,7 @@ test-all: ## run tests in several Python environments with tox
 	tox
 
 coverage: ## check code coverage and show report in terminal
-	coverage run --rcfile=.coveragerc --module=pytest
+	coverage run --rcfile=.coveragerc --module pytest
 	coverage report --rcfile=.coveragerc
 
 coverage-html: coverage ## check code coverage and show report in browser
