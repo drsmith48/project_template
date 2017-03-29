@@ -12,8 +12,13 @@ engines:
     enabled: true
   pep8:
     enabled: true
+
+exclude_paths:
+  - "tests/"
+  - "docs/"
+  - "**.**"
+  - "!**.py"
+
 ratings:
   paths:
   - "**.py"
-exclude_paths:
-  - tests/
