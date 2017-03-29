@@ -19,14 +19,41 @@ ProjectTemplate
    :target: https://codeclimate.com/github/drsmith48/project_template
    :alt: Code Quality
 
-A Python project template with docs, testing, CI, code coverage, and versioning.  
+A Python project template with docs, testing, CI, code coverage, and versioning.
 
-* ``sphinx`` for html/pdf documentation, hosted at https://project-template.readthedocs.io/
-* Travis-CI for continuous integration, hosted at https://travis-ci.org/drsmith48/project_template
-* ``pytest`` and ``tox`` for testing
-* ``coverage`` for test coverage, hosted at https://codeclimate.com/github/drsmith48/project_template
-* ``flake8`` for code style/quality check, hosted at https://codeclimate.com/github/drsmith48/project_template
-* ``bumpversion`` for versioning
-* Run ``make`` for an overview of ``Makefile`` recipes
+* Open-source development
+
+  * Hosted at https://github.com/drsmith48/project_template
+
+* Documentation
+
+  * ``sphinx`` for generation of html/pdf documentation
+
+    * Run ``make docs`` to generate docs
+
+  * Hosted at https://project-template.readthedocs.io/
+
+* Testing
+
+  * ``pytest``, ``tox``, ``coverage``, and ``flake8`` for testing, test coverate, and code QA
+  
+    * Run ``pytest`` or ``make test`` to test in current environment
+    * Run ``tox`` or ``make test-all`` to test in multiple virtual envs
+    * Run ``coverage`` or ``make coverage`` for test coverate report
+    * Run ``flake8`` or ``make lint`` for code style/quality checks
+    
+  * Hosted at https://codeclimate.com/github/drsmith48/project_template
+
+* Continuous integration
+
+  * Hosted at https://travis-ci.org/drsmith48/project_template
+
+* Versioning
+
+  * Run ``bumpversion [major|minor|patch]``
+
+* Makefile recipes
+
+  * Run ``make`` for an overview of recipes
 
 This project is adapted from the ``cookiecutter`` package template engine and the ``cookiecutter-pypackage`` template.  https://github.com/audreyr/cookiecutter
