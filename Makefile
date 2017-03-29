@@ -30,16 +30,20 @@ test: ## run tests in current Python environment with pytest
 	py.test
 	
 test-all: ## run tests in several Python environments with tox
+	rm -fr .tox/
 	tox
 
 lint: ## check code style/quality with flake8
+	rm -f flake8*
 	flake8 --exit-zero --benchmark project_template tests
 
 coverage: ## check code coverage and show report in terminal
+	rm -f .coverage
 	coverage run --module pytest
 	coverage report
 
 coverage-html: coverage ## check code coverage and show report in browser
+	@rm -fr htmlcov/
 	@coverage html
 	@$(BROWSER) htmlcov/index.html
 
@@ -52,7 +56,7 @@ docs-html: clean-docs ## generate HTML documentation
 docs-pdf: clean-docs ## generate PDF documentation
 	$(MAKE) -C docs latexpdf
 
-clean: clean-build clean-pyc clean-test ## remove all build, test, coverage and Python artifacts
+clean: clean-build clean-pyc clean-docs ## remove all build, docs, and Python artifacts
 
 clean-build: ## remove build artifacts
 	rm -fr build/
@@ -66,11 +70,6 @@ clean-pyc: ## remove Python file artifacts
 	find . -name '*.pyo' -exec rm -f {} +
 	find . -name '*~' -exec rm -f {} +
 	find . -name '__pycache__' -exec rm -fr {} +
-
-clean-test: ## remove test and coverage artifacts
-	rm -fr .tox/
-	rm -f .coverage
-	rm -fr htmlcov/
 
 clean-docs: ## clean docs
 	rm -f docs/project_template.rst
