@@ -26,6 +26,32 @@ BROWSER := python -c "$$BROWSER_PYSCRIPT"
 help:
 	@python -c "$$PRINT_HELP_PYSCRIPT" < $(MAKEFILE_LIST)
 
+test: ## run tests in current Python environment with pytest
+	py.test
+	
+test-all: ## run tests in several Python environments with tox
+	tox
+
+lint: ## check code style/quality with flake8
+	flake8 --exit-zero --benchmark --config=flake8.cfg project_template tests
+
+coverage: ## check code coverage and show report in terminal
+	coverage run --rcfile=.coveragerc --module pytest
+	coverage report --rcfile=.coveragerc
+
+coverage-html: coverage ## check code coverage and show report in browser
+	@coverage html --rcfile=.coveragerc
+	@$(BROWSER) htmlcov/index.html
+
+docs: clean-docs docs-pdf docs-html ## generate HTML & PDF documentation
+
+docs-html: clean-docs ## generate HTML documentation
+	$(MAKE) -C docs html
+	@$(BROWSER) docs/_build/html/index.html
+    
+docs-pdf: clean-docs ## generate PDF documentation
+	$(MAKE) -C docs latexpdf
+
 clean: clean-build clean-pyc clean-test ## remove all build, test, coverage and Python artifacts
 
 clean-build: ## remove build artifacts
@@ -51,32 +77,6 @@ clean-docs: ## clean docs
 	rm -f docs/modules.rst
 	sphinx-apidoc -o docs/ project_template
 	$(MAKE) -C docs clean
-
-lint: ## check code style/quality with flake8
-	flake8 --exit-zero --benchmark --config=flake8.cfg project_template tests
-
-test: ## run tests in current Python environment with pytest
-	py.test
-	
-test-all: ## run tests in several Python environments with tox
-	tox
-
-coverage: ## check code coverage and show report in terminal
-	coverage run --rcfile=.coveragerc --module pytest
-	coverage report --rcfile=.coveragerc
-
-coverage-html: coverage ## check code coverage and show report in browser
-	@coverage html --rcfile=.coveragerc
-	@$(BROWSER) htmlcov/index.html
-
-docs: clean-docs pdf html ## generate HTML & PDF documentation
-
-html: clean-docs ## generate HTML documentation
-	$(MAKE) -C docs html
-	@$(BROWSER) docs/_build/html/index.html
-    
-pdf: clean-docs ## generate PDF documentation
-	$(MAKE) -C docs latexpdf
 
 servedocs: docs ## compile the docs watching for changes
 	watchmedo shell-command -p '*.rst' -c '$(MAKE) -C docs html' -R -D .
