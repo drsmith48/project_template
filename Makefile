@@ -53,7 +53,7 @@ clean-docs: ## clean docs
 	$(MAKE) -C docs clean
 
 lint: ## check code style/quality with flake8
-	flake8 --exit-zero --benchmark --config=.flake8 project_template tests
+	flake8 --exit-zero --benchmark --config=flake8.cfg project_template tests
 
 test: ## run tests in current Python environment with pytest
 	py.test

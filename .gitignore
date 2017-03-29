@@ -44,7 +44,7 @@ nosetests.xml
 coverage.xml
 *,cover
 .hypothesis/
-flake8.txt
+flake8.output.txt
 
 # Translations
 *.mo
