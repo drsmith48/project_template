@@ -51,4 +51,4 @@ ProjectTemplate
 
   * Run ``make`` for recipe summaries
 
-This project is adapted from the ``cookiecutter`` package template engine and the ``cookiecutter-pypackage`` template.  https://github.com/audreyr/cookiecutter
+This project is adapted from the `Cookiecutter <https://github.com/audreyr/cookiecutter>`_ package utility and the `PyPackage <https://github.com/audreyr/cookiecutter-pypackage>`_ template.
