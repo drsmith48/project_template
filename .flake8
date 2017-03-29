@@ -1,0 +1,7 @@
+[flake8]
+exclude = docs
+max-line-length = 5
+show-source = True
+statistics = True
+output-file = flake8.txt
+tee = True

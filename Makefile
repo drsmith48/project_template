@@ -28,7 +28,6 @@ help:
 
 clean: clean-build clean-pyc clean-test ## remove all build, test, coverage and Python artifacts
 
-
 clean-build: ## remove build artifacts
 	rm -fr build/
 	rm -fr dist/
@@ -53,21 +52,21 @@ clean-docs: ## clean docs
 	sphinx-apidoc -o docs/ project_template
 	$(MAKE) -C docs clean
 
-lint: ## check style with flake8
-	flake8 --exit-zero --config=setup.cfg --benchmark project_template tests
+lint: ## check code style/quality with flake8
+	flake8 --exit-zero --benchmark --config=.flake8 project_template tests
 
-test: ## run tests quickly with the default Python
+test: ## run tests in current Python environment with pytest
 	py.test
 	
-test-all: ## run tests on every Python version with tox
+test-all: ## run tests in several Python environments with tox
 	tox
 
 coverage: ## check code coverage and show report in terminal
-	coverage run --rcfile .coveragerc --module pytest
-	coverage report --rcfile .coveragerc
+	coverage run --rcfile=.coveragerc --module=pytest
+	coverage report --rcfile=.coveragerc
 
 coverage-html: coverage ## check code coverage and show report in browser
-	@coverage html --rcfile .coveragerc
+	@coverage html --rcfile=.coveragerc
 	@$(BROWSER) htmlcov/index.html
 
 docs: clean-docs pdf html ## generate HTML & PDF documentation
