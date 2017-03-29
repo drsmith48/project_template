@@ -14,7 +14,6 @@ engines:
     enabled: true
 
 exclude_paths:
-  - "tests/"
   - "docs/"
   - "LICENSE"
   - "Makefile"
