@@ -1,0 +1,6 @@
+update: all
+branch: master
+schedule: "every month"
+requirements:
+  - requirements_dev.txt
+ 

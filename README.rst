@@ -19,52 +19,34 @@ ProjectTemplate
    :target: https://codeclimate.com/github/drsmith48/project_template
    :alt: Code Quality
    
-Most recent release:
+.. image:: https://pyup.io/repos/github/drsmith48/project_template/shield.svg
+     :target: https://pyup.io/repos/github/drsmith48/project_template/
+     :alt: Updates
+
+.. image:: https://pyup.io/repos/github/drsmith48/project_template/python-3-shield.svg
+     :target: https://pyup.io/repos/github/drsmith48/project_template/
+     :alt: Python 3
 
 .. image:: https://badge.fury.io/gh/drsmith48%2Fproject_template.svg
     :target: https://github.com/drsmith48/project_template/releases/latest
-    :alt: GitHub Release
+    :alt: Latest Release
 
-.. image:: https://readthedocs.org/projects/project-template/badge/?version=stable
-        :target: https://project-template.readthedocs.io/en/stable/
-        :alt: Documentation Status
+**A Python project template with several best-practice features/integrations**
 
+* Documentation with ``Sphinx`` and hosted at `Read the Docs <https://project-template.readthedocs.io/>`_
 
+  * Run ``make docs`` to generate docs
 
-
-A Python project template with docs, testing, CI, code coverage, and versioning.
-
-* Open-source development
-
-  * Hosted at https://github.com/drsmith48/project_template
-
-* Documentation
-
-  * ``sphinx`` for generation of html/pdf documentation
-
-    * Run ``make docs`` to generate docs
-
-  * Hosted at https://project-template.readthedocs.io/
-
-* Testing
-
-  * ``pytest``, ``tox``, ``coverage``, and ``flake8`` for testing, test coverate, and code QA
+* Testing with ``pytest`` and more; hosted at `Code Climate <https://codeclimate.com/github/drsmith48/project_template>`_
   
-    * Run ``pytest`` or ``make test`` to test in current environment
-    * Run ``tox`` or ``make test-all`` to test in multiple virtual envs
-    * Run ``coverage`` or ``make coverage`` for test coverate report
-    * Run ``flake8`` or ``make lint`` for code style/quality checks
-    
-  * Hosted at https://codeclimate.com/github/drsmith48/project_template
+  * Run ``pytest`` or ``make test`` to test in current environment
+  * Run ``tox`` or ``make test-all`` to test in multiple virtual envs
+  * Run ``coverage`` or ``make coverage`` for test coverate report
+  * Run ``flake8`` or ``make lint`` for code style/quality checks
 
-* Continuous integration
-
-  * Hosted at https://travis-ci.org/drsmith48/project_template
-
-* Versioning
-
-  * Run ``bumpversion [major|minor|patch]`` to increment X.Y.Z version
-
+* Continuous integration at `Travis-CI <https://travis-ci.org/drsmith48/project_template>`_
+* Version management with ``bumpversion``
+* Dependency updates and Python 3 compatability at `PyUp.io <https://pyup.io/account/repos/github/drsmith48/project_template/>`_
 * Makefile recipes
 
   * Run ``make`` for an overview of recipes
