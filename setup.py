@@ -10,17 +10,18 @@ with open('HISTORY.rst') as history_file:
     history = history_file.read()
 
 requirements = [
-    # TODO: put package requirements here
+    # put package requirements here
 ]
 
 test_requirements = [
-    # TODO: put package test requirements here
+    # put package test requirements here
 ]
 
 setup(
     name='project_template',
     version='0.1.1',
-    description="Python Boilerplate contains all the boilerplate you need to create a Python package.",
+    description="Python Boilerplate contains all the boilerplate you need " \
+                "to create a Python package.",
     long_description=readme + '\n\n' + history,
     author="David R. Smith",
     author_email='drsmith48@gmail.com',
