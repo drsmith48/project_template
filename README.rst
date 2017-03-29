@@ -37,7 +37,7 @@ ProjectTemplate
 
   * Run ``make docs`` to generate docs
 
-* Testing with ``pytest`` and more; hosted at `Code Climate <https://codeclimate.com/github/drsmith48/project_template>`_
+* Testing with ``pytest``, ``tox``, and more; hosted at `Code Climate <https://codeclimate.com/github/drsmith48/project_template>`_
   
   * Run ``pytest`` or ``make test`` to test in current environment
   * Run ``tox`` or ``make test-all`` to test in multiple virtual envs
@@ -49,6 +49,6 @@ ProjectTemplate
 * Dependency updates and Python 3 compatability at `PyUp.io <https://pyup.io/account/repos/github/drsmith48/project_template/>`_
 * Makefile recipes
 
-  * Run ``make`` for an overview of recipes
+  * Run ``make`` for recipe summaries
 
 This project is adapted from the ``cookiecutter`` package template engine and the ``cookiecutter-pypackage`` template.  https://github.com/audreyr/cookiecutter
