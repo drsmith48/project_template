@@ -9,9 +9,21 @@ python:
   - 3.5
   - 3.6
   - nightly
+  
+env:
+  - NUMPY_VERSION=1.11
+  - NUMPY_VERSION=1.12
+  
+matrix:
+  exclude:
+    - python: 2.6
+      env: NUMPY_VERSION=1.12
+  allow_failures:
+    - python: nightly
 
 # command to install dependencies, e.g. pip install -r requirements.txt --use-mirrors
 install:
+  - pip install numpy==$NUMPY_VERSION
   - pip install -r requirements_dev.txt
 
 # command to run tests, e.g. python setup.py test

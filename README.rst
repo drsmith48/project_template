@@ -54,6 +54,8 @@ ProjectTemplate
   
   * Run ``pytest`` or ``make test`` to test in current environment
   * Run ``tox`` or ``make test-all`` to test in multiple virtual envs
+  
+    * Matrix testing covers Python 2.7/3.X and numpy 1.11/1.12
 
 * Quaity checks with ``coverage`` and ``flake8``
 
