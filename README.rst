@@ -21,7 +21,7 @@ ProjectTemplate
    :alt: Code Quality
 
 .. image:: https://www.quantifiedcode.com/api/v1/project/5f42dea687b44b63969e8018f5bc0324/badge.svg
-  :target: https://www.quantifiedcode.com/app/project/5f42dea687b44b63969e8018f5bc0324
+  :target: https://www.quantifiedcode.com/app/project/5f42dea687b44b63969e8018f5bc0324/visualizations
   :alt: Code Issues
 
 .. image:: https://pyup.io/repos/github/drsmith48/project_template/shield.svg
