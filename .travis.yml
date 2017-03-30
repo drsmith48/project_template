@@ -13,6 +13,7 @@ python:
   - nightly
   
 env:
+  - NUMPY_CONSTRAINT=constraint_np110.txt
   - NUMPY_CONSTRAINT=constraint_np111.txt
   - NUMPY_CONSTRAINT=constraint_np112.txt
   
