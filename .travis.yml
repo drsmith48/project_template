@@ -13,24 +13,25 @@ python:
   - nightly
   
 env:
-  - NP_CONSTRAINT=constraint_np110.txt
-  - NP_CONSTRAINT=constraint_np111.txt
-  - NP_CONSTRAINT=constraint_np112.txt
+  - NP_CONSTRAINT=requirements/constraint_np110.txt
+  - NP_CONSTRAINT=requirements/constraint_np111.txt
+  - NP_CONSTRAINT=requirements/constraint_np112.txt
   
 # test matrix modifications
 matrix:
   exclude:
     # Numpy 1.12 does not support Python 2.6
     - python: 2.6
-      env: NP_CONSTRAINT=constraint_np112.txt
+      env: NP_CONSTRAINT=requirements/constraint_np112.txt
   allow_failures:
-    # allow failures for Python dev. versions
+    # allow failures for old and new Python versions
+    - python: 2.6
     - python: nightly
 
 # command to install dependencies, e.g. pip install -r requirements.txt --use-mirrors
 install:
   - pip install --upgrade pip
-  - pip install --ignore-installed -c $NP_CONSTRAINT -r requirements_dev.txt
+  - pip install --ignore-installed -c $NP_CONSTRAINT -r requirements/requirements_dev.txt
   - pip list
 
 # command to run tests, e.g. python setup.py test
