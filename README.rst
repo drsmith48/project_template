@@ -45,6 +45,9 @@ ProjectTemplate
 **A Python project template with several best-practice features/integrations**
 
 * Continuous integration at `Travis-CI <https://travis-ci.org/drsmith48/project_template>`_
+
+  * Test matrix covers several Python and Numpy versions
+
 * Documentation with ``Sphinx``
 
   * Run ``make docs`` to generate docs
@@ -55,7 +58,7 @@ ProjectTemplate
   * Run ``pytest`` or ``make test`` to test in current environment
   * Run ``tox`` or ``make test-all`` to test in multiple virtual envs
   
-    * Matrix testing covers Python 2.7/3.X and numpy 1.11/1.12
+    * Test matrix covers several Python and Numpy versions
 
 * Quaity checks with ``coverage`` and ``flake8``
 
