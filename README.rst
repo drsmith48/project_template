@@ -32,28 +32,34 @@ ProjectTemplate
      :target: https://pyup.io/repos/github/drsmith48/project_template/
      :alt: Python 3
 
-.. image:: https://badge.fury.io/gh/drsmith48%2Fproject_template.svg
+.. image:: https://img.shields.io/github/release/drsmith48/project_template.svg
     :target: https://github.com/drsmith48/project_template/releases/latest
     :alt: Latest Release
 
+.. image:: https://img.shields.io/github/contributors/drsmith48/project_template.svg
+    :target: https://github.com/drsmith48/project_template
 
+.. image:: https://img.shields.io/github/commits-since/drsmith48/project_template/v0.1.1.svg
+    :target: https://github.com/drsmith48/project_template
 
 **A Python project template with several best-practice features/integrations**
 
 * Continuous integration at `Travis-CI <https://travis-ci.org/drsmith48/project_template>`_
-* Documentation with ``Sphinx`` and hosted at `Read the Docs <https://project-template.readthedocs.io/>`_
+* Documentation with ``Sphinx``
 
   * Run ``make docs`` to generate docs
+  * Hosted at `Read the Docs <https://project-template.readthedocs.io/>`_
 
 * Testing with ``pytest`` and ``tox``
   
   * Run ``pytest`` or ``make test`` to test in current environment
   * Run ``tox`` or ``make test-all`` to test in multiple virtual envs
 
-* Quaity checks with ``coverage`` and ``flake8``; hosted at `Code Climate <https://codeclimate.com/github/drsmith48/project_template>`_ and `QuantifiedCode <https://www.quantifiedcode.com/app/project/5f42dea687b44b63969e8018f5bc0324>`_
+* Quaity checks with ``coverage`` and ``flake8``
 
   * Run ``coverage`` or ``make coverage`` for test coverage report
   * Run ``flake8`` or ``make lint`` for code style/quality checks
+  * Analysis at `Code Climate <https://codeclimate.com/github/drsmith48/project_template>`_ and `QuantifiedCode <https://www.quantifiedcode.com/app/project/5f42dea687b44b63969e8018f5bc0324>`_
 
 * Dependency updates and Python 3 compatability at `PyUp.io <https://pyup.io/account/repos/github/drsmith48/project_template/>`_
 * Version management with ``bumpversion``
