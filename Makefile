@@ -27,7 +27,7 @@ help:
 	@python -c "$$PRINT_HELP_PYSCRIPT" < $(MAKEFILE_LIST)
 
 test: ## run tests in current Python environment with pytest
-	py.test
+	py.test --pep8 tests/
 	
 test-all: ## run tests in several Python environments with tox
 	rm -fr .tox/
