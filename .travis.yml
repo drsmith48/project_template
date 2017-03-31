@@ -19,13 +19,14 @@ env:
   
 # test matrix modifications
 matrix:
-  # builds in addition to matrix builds
+  # jobs in addition to matrix jobs
   include:
     - language: generic
       python: 2.7
       os: osx
       env: NP_CONSTRAINT=requirements/constraint_np112.txt
       before_install:
+        - ls -al /usr/local/bin/python*
         - which python
         - python --version
         - virtualenv env -p python
@@ -35,24 +36,26 @@ matrix:
       os: osx
       env: NP_CONSTRAINT=requirements/constraint_np112.txt
       before_install:
+        - ls -al /usr/local/bin/python*
         - which python
         - python --version
         - brew install python3
         - virtualenv env -p python3
         - source env/bin/activate
-  # allowed failures that will not fail the entire build
+  # allowed job failures that will not fail the entire build
   allow_failures:
     - python: nightly
 
-# command to install dependencies, e.g. pip install -r requirements.txt --use-mirrors
-install:
+before_install:
+  - ls -al ~/virtualenv/python*
   - which python
   - python --version
+
+install:
   - pip install --upgrade pip
   - pip install --ignore-installed -c $NP_CONSTRAINT -r requirements/requirements_dev.txt
   - pip list
 
-# command to run tests, e.g. python setup.py test
 script:
   - make test
   - make coverage
