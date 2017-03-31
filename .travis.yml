@@ -5,27 +5,23 @@ language: python
 
 # python and env generate the test matrix
 python:
-  - 2.6
   - 2.7
-  - 3.4
   - 3.5
   - 3.6
   - nightly
-  
+
+os:
+  - linux
+  - osx
+
 env:
-  - NP_CONSTRAINT=requirements/constraint_np110.txt
   - NP_CONSTRAINT=requirements/constraint_np111.txt
   - NP_CONSTRAINT=requirements/constraint_np112.txt
   
 # test matrix modifications
 matrix:
-  exclude:
-    # Numpy 1.12 does not support Python 2.6
-    - python: 2.6
-      env: NP_CONSTRAINT=requirements/constraint_np112.txt
   allow_failures:
     # allow failures for old and new Python versions
-    - python: 2.6
     - python: nightly
 
 # command to install dependencies, e.g. pip install -r requirements.txt --use-mirrors
