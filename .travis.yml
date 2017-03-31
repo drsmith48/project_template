@@ -21,18 +21,17 @@ env:
 matrix:
   include:
     - language: generic
+      python: 2.7
       os: osx
       env: NP_CONSTRAINT=requirements/constraint_np112.txt
       before_install:
-        - brew update
-        - brew install python
         - virtualenv env -p python
         - source env/bin/activate
     - language: generic
+      python: 2.7
       os: osx
       env: NP_CONSTRAINT=requirements/constraint_np112.txt
       before_install:
-        - brew update
         - brew install python3
         - virtualenv env -p python3
         - source env/bin/activate
