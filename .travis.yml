@@ -11,8 +11,7 @@ python:
   - nightly
 
 os:
-  #- linux
-  - osx
+  - linux
 
 env:
   - NP_CONSTRAINT=requirements/constraint_np111.txt
@@ -21,8 +20,17 @@ env:
 # test matrix modifications
 matrix:
   include:
-    - language: python
+    - language: generic
       os: osx
+      env: NP_CONSTRAINT=requirements/constraint_np112.txt
+      before_install:
+        - brew update
+        - brew install python
+        - virtualenv env -p python
+        - source env/bin/activate
+    - language: generic
+      os: osx
+      env: NP_CONSTRAINT=requirements/constraint_np112.txt
       before_install:
         - brew update
         - brew install python3
