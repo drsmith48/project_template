@@ -11,7 +11,7 @@ python:
   - nightly
 
 os:
-  - linux
+  #- linux
   - osx
 
 env:
@@ -20,6 +20,14 @@ env:
   
 # test matrix modifications
 matrix:
+  include:
+    - language: python
+      os: osx
+      before_install:
+        - brew update
+        - brew install python3
+        - virtualenv env -p python3
+        - source env/bin/activate
   allow_failures:
     # allow failures for old and new Python versions
     - python: nightly
