@@ -19,7 +19,7 @@ test_requirements = [
 
 setup(
     name='project_template',
-    version='0.4.0',
+    version='0.5.0',
     description="Python Boilerplate contains all the boilerplate you need "
                 "to create a Python package.",
     long_description=readme + '\n\n' + history,
