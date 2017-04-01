@@ -1,4 +1,4 @@
--r requirements_test.txt
+-r requirements-test.txt
 
 bumpversion >= 0.5.3
 codeclimate-test-reporter >= 0.2.1
