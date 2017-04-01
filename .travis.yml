@@ -21,6 +21,7 @@ env:
 matrix:
   # add OSX jobs to matrix
   include:
+    # latest Python 2.7.X
     - language: generic
       python: 2.7
       os: osx
@@ -29,6 +30,7 @@ matrix:
         - virtualenv env -p python
         - source env/bin/activate
         - python --version
+    # latest Python 3.X
     - language: generic
       python: 2.7
       os: osx

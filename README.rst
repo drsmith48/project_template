@@ -46,7 +46,8 @@ ProjectTemplate
 
 * Continuous integration at `Travis-CI <https://travis-ci.org/drsmith48/project_template>`_
 
-  * Test matrix covers several Python and Numpy versions
+  * Coverage for several Python and Numpy versions
+  * Coverage for Linux and OS X
 
 * Documentation with ``Sphinx``
 
