@@ -6,7 +6,11 @@ ProjectTemplate
 
 .. image:: https://travis-ci.org/drsmith48/project_template.svg?branch=master
     :target: https://travis-ci.org/drsmith48/project_template
-    :alt: Build Status
+    :alt: Travis-CI
+
+.. image:: https://ci.appveyor.com/api/projects/status/qubwb5tw1itdfodc?svg=true
+    :target: https://ci.appveyor.com/project/drsmith48/project-template
+    :alt: AppVeyor
 
 .. image:: https://readthedocs.org/projects/project-template/badge/?version=latest
         :target: https://project-template.readthedocs.io/en/latest/
@@ -21,8 +25,8 @@ ProjectTemplate
    :alt: Code Quality
 
 .. image:: https://www.quantifiedcode.com/api/v1/project/5f42dea687b44b63969e8018f5bc0324/badge.svg
-  :target: https://www.quantifiedcode.com/app/project/5f42dea687b44b63969e8018f5bc0324/visualizations
-  :alt: Code Issues
+    :target: https://www.quantifiedcode.com/app/project/5f42dea687b44b63969e8018f5bc0324/visualizations
+    :alt: Code Issues
 
 .. image:: https://pyup.io/repos/github/drsmith48/project_template/shield.svg
      :target: https://pyup.io/repos/github/drsmith48/project_template/
@@ -44,10 +48,11 @@ ProjectTemplate
 
 **A Python project template with several best-practice features/integrations**
 
-* Continuous integration at `Travis-CI <https://travis-ci.org/drsmith48/project_template>`_
+* Continuous integration
 
+  * Linux and OSX coverage at `Travis-CI <https://travis-ci.org/drsmith48/project_template>`_
+  * Windows coverage at `AppVeyor <https://ci.appveyor.com/project/drsmith48/project-template>`_
   * Coverage for several Python and Numpy versions
-  * Coverage for Linux and OS X
 
 * Documentation with ``Sphinx``
 
