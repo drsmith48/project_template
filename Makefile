@@ -27,7 +27,7 @@ help:
 	@python -c "$$PRINT_HELP_PYSCRIPT" < $(MAKEFILE_LIST)
 
 test: ## run tests in current Python environment with pytest
-	py.test tests/
+	py.test --verbose tests/
 	
 test-all: ## run tests in several Python environments with tox
 	rm -fr .tox/
@@ -35,11 +35,11 @@ test-all: ## run tests in several Python environments with tox
 
 lint: ## check code style/quality with flake8
 	rm -f flake8*
-	flake8 --exit-zero --benchmark project_template tests
+	flake8 --exit-zero --benchmark project_template/ tests/
 
 coverage: ## check code coverage and show report in terminal
 	rm -f .coverage
-	coverage run --module pytest
+	coverage run --module pytest --verbose tests/
 	coverage report
 
 coverage-html: coverage ## check code coverage and show report in browser

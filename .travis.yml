@@ -3,7 +3,7 @@
 
 language: python
 
-# python and env generate the test matrix
+# python, os, and env generate the test matrix
 python:
   - 2.7
   - 3.5
@@ -19,36 +19,30 @@ env:
   
 # test matrix modifications
 matrix:
-  # jobs in addition to matrix jobs
+  # add OSX jobs to matrix
   include:
     - language: generic
       python: 2.7
       os: osx
       env: NP_CONSTRAINT=requirements/constraint_np112.txt
       before_install:
-        - ls -al /usr/local/bin/python*
-        - which python
-        - python --version
         - virtualenv env -p python
         - source env/bin/activate
+        - python --version
     - language: generic
       python: 2.7
       os: osx
       env: NP_CONSTRAINT=requirements/constraint_np112.txt
       before_install:
-        - ls -al /usr/local/bin/python*
-        - which python
-        - python --version
         - brew install python3
         - virtualenv env -p python3
         - source env/bin/activate
+        - python --version
   # allowed job failures that will not fail the entire build
   allow_failures:
     - python: nightly
 
 before_install:
-  - ls -al ~/virtualenv/python*
-  - which python
   - python --version
 
 install:
