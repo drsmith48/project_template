@@ -74,6 +74,9 @@ ProjectTemplate
 
 * Dependency updates and Python 3 compatability at `PyUp.io <https://pyup.io/account/repos/github/drsmith48/project_template/>`_
 * Version management with ``bumpversion``
+
+  * Run ``bumpversion major|minor|patch`` to increment version project-wide
+
 * Makefile recipes
 
   * Run ``make`` for recipe summaries
