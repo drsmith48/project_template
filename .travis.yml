@@ -10,7 +10,7 @@ env:
   - NP_VER="1.12.*"
   
 matrix:
-  # add OSX jobs to matrix
+  # add OSX jobs
   include:
     # latest Python 2.7.X
     - language: generic
@@ -40,6 +40,7 @@ before_install:
 
 install:
   - pip install --upgrade pip
+  - pip install --upgrade wheel setuptools
   - pip install --upgrade -r requirements/requirements-dev.txt
   - pip install numpy==${NP_VER}
   - pip list
