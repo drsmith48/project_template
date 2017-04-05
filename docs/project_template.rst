@@ -1,11 +1,11 @@
-project_template package
-========================
+project\_template package
+=========================
 
 Submodules
 ----------
 
-project_template.project_template module
-----------------------------------------
+project\_template\.project\_template module
+-------------------------------------------
 
 .. automodule:: project_template.project_template
     :members:

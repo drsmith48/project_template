@@ -49,11 +49,11 @@ coverage-html: coverage ## check code coverage and show report in browser
 
 docs: clean-docs docs-pdf docs-html ## generate HTML & PDF documentation
 
-docs-html: clean-docs ## generate HTML documentation
+docs-html: ## generate HTML documentation
 	$(MAKE) -C docs html
 	@$(BROWSER) docs/_build/html/index.html
     
-docs-pdf: clean-docs ## generate PDF documentation
+docs-pdf: ## generate PDF documentation
 	$(MAKE) -C docs latexpdf
 
 clean: clean-build clean-pyc clean-docs ## remove all build, docs, and Python artifacts
