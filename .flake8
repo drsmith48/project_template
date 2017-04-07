@@ -5,3 +5,4 @@ show-source = True
 statistics = True
 output-file = flake8.output.txt
 tee = True
+max-complexity = 10
